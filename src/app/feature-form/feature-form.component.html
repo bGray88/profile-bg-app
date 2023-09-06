@@ -1,0 +1,19 @@
+<form [formGroup]="featureForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Title</label>
+    <input type="text" formControlName="featureTitle">
+  </div>
+  <div>
+    <label>Description</label>
+    <input type="text" formControlName="featureDescription">
+  </div>
+  <div>
+    <label>Date</label>
+    <input type="date" formControlName="featureDate">
+  </div>
+  <div>
+    <label>Image</label>
+    <input type="text" formControlName="featureImage">
+  </div>
+  <button type="submit" [disabled]="featureForm.invalid">Submit</button>
+</form>

@@ -1,0 +1,8 @@
+<p>Features</p>
+
+<ul>
+  <li *ngFor="let feature of features; index as i">
+    {{feature.title}} {{feature.date | date:'dd.MM.yyyy'}}
+    <button (click)="deleteFeature(i)">Delete</button>
+  </li>
+</ul>
