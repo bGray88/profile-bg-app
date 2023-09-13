@@ -7,7 +7,8 @@ import { FeatureFormComponent } from './feature-form/feature-form.component';
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "list", component: FeatureListComponent},
-  {path: "new", component: FeatureFormComponent}
+  {path: "new", component: FeatureFormComponent},
+  {path: "edit/:id", component: FeatureFormComponent}
 ];
 
 @NgModule({
