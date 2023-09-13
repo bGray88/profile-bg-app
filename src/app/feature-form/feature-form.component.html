@@ -2,18 +2,30 @@
   <div>
     <label>Title</label>
     <input type="text" formControlName="featureTitle">
+    <div *ngIf="featureForm.get('featureTitle')?.invalid && featureForm.get('featureTitle')?.touched">
+      Title is required
+    </div>
   </div>
   <div>
     <label>Description</label>
     <input type="text" formControlName="featureDescription">
+    <div *ngIf="featureForm.get('featureDescription')?.invalid && featureForm.get('featureDescription')?.touched">
+      Description is required
+    </div>
   </div>
   <div>
     <label>Date</label>
     <input type="date" formControlName="featureDate">
+    <div *ngIf="featureForm.get('featureDate')?.invalid && featureForm.get('featureDate')?.touched">
+      Date is required
+    </div>
   </div>
   <div>
     <label>Image</label>
     <input type="text" formControlName="featureImage">
+    <div *ngIf="featureForm.get('featureImage')?.invalid && featureForm.get('featureImage')?.touched">
+      Image is required
+    </div>
   </div>
   <button type="submit" [disabled]="featureForm.invalid">Submit</button>
 </form>

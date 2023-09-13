@@ -1,8 +1,13 @@
-<p>Features</p>
+<h2>Features</h2>
 
-<ul>
-  <li *ngFor="let feature of features; index as i">
-    {{feature.title}} {{feature.date | date:'dd.MM.yyyy'}}
-    <button (click)="deleteFeature(i)">Delete</button>
+<ul *ngIf="features.length; else noFeatures">
+  <li *ngFor="let feature of features">
+    {{feature.featureTitle}} {{feature.featureDate | date:'dd.MM.yyyy'}}
+    <button (click)="deleteFeature(feature)">Delete</button>
+    <button [routerLink]="['/edit', feature.id]">Edit</button>
   </li>
 </ul>
+
+<ng-template #noFeatures>
+  <p>No Features Exist</p>
+</ng-template>

@@ -1,7 +1,7 @@
 export interface Feature {
-  id:          number,
-  title:       string,
-  description: string,
-  date:        Date,
-  image:       string
+  id:                 string,
+  featureTitle:       string,
+  featureDescription: string,
+  featureDate:        Date,
+  featureImage:       string
 }
